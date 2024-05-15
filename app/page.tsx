@@ -16,6 +16,13 @@ export default function Home() {
     setTodoInput("");
   }
 
+  function deleteTodo(index: number) {
+    const newArray = todos
+    newArray.splice(index, 1)
+
+    setTodos([...newArray])
+  }
+
   return (
     <main className="max-w-7xl w-full px-5 mx-auto py-6">
      <form 
@@ -28,6 +35,7 @@ export default function Home() {
         placeholder="todo" 
         value={todoInput} 
         onChange={(e) => setTodoInput(e.target.value)} 
+        name="todo"
         />
         <Button>Add todo</Button>
       </div>
@@ -41,6 +49,10 @@ export default function Home() {
             variant="destructive" 
             size="icon"
             className="ml-auto"
+            type="button"
+            onClick={() => {
+              deleteTodo(index)
+            }}
             >
               <Trash 
               className="size-4"
