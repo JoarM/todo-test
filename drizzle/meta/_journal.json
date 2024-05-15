@@ -1,0 +1,13 @@
+{
+  "version": "6",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1715692408573,
+      "tag": "0000_busy_wild_pack",
+      "breakpoints": false
+    }
+  ]
+}
